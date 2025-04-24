@@ -23,7 +23,6 @@
       font-size: 1.2rem;
       padding: 10px 20px;
       cursor: pointer;
-      display: none;  /* Tasto inizialmente nascosto */
     }
     .attesa {
       font-size: 1.2rem;
@@ -43,7 +42,7 @@
   <button onclick="document.getElementById('musica').play()">Ascolta e rifletti</button>
   <audio id="musica" src="audio/ascolta-e-rifletti.mp3" loop></audio>
 
-  <button id="vaiAvanti" onclick="window.location.href='pagina2.html'">Vai avanti</button>
+  <button id="vaiAvanti" style="display: none;" onclick="window.location.href='pagina2.html'">Vai avanti</button>
 
   <script>
     setTimeout(function() {
