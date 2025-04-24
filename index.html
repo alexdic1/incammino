@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Il Patto del Cerchio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Spectral SC', serif;
+      background: url('img/sfondo-lampo.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+    }
+    .azione button {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      cursor: pointer;
+      display: none;  /* Tasto inizialmente nascosto */
+    }
+    .attesa {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Una comunità nascosta attende.</h1>
+  <p>Prima di oltrepassare la soglia… ascolta.<br>E lascia che qualcosa dentro si muova.</p>
+
+  <p class="attesa">A breve ti sarà permesso di andare avanti.<br>Nel mentre, ascolta e rifletti.</p>
+
+  <button onclick="document.getElementById('musica').play()">Ascolta e rifletti</button>
+  <audio id="musica" src="audio/ascolta-e-rifletti.mp3" loop></audio>
+
+  <p class="attesa">Aspetta un minuto... a breve ti sarà permesso di andare avanti.</p>
+
+  <button id="vaiAvanti" onclick="window.location.href='pagina2.html'">Vai avanti</button>
+
+  <script>
+    setTimeout(function() {
+      document.getElementById('vaiAvanti').style.display = 'inline-block';
+    }, 30000); // 30 secondi
+  </script>
+</body>
+</html>
