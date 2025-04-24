@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Il Luogo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Spectral SC', serif;
+      background: url('img/sfondo-luogo.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      padding: 2rem;
+    }
+    textarea, input, select {
+      width: 80%;
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-family: 'Spectral SC', serif;
+      padding: 8px;
+    }
+    .azione button {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Il Luogo</h2>
+  <p>Se esistesse un luogo reale dove vivere insieme... tu ci vivresti?</p>
+  <form action="https://formspree.io/f/mrbqgvql" method="POST">
+    <textarea name="immaginazione" placeholder="Come immagini questo luogo?"></textarea><br>
+    <input type="text" name="provenienza" placeholder="Da dove verresti?"><br>
+    <select name="disponibilità">
+      <option value="">Saresti disposto a viverci davvero?</option>
+      <option>Sì</option>
+      <option>No</option>
+      <option>Forse</option>
+    </select><br>
+    <button type="submit">Rispondo con verità</button>
+  </form>
+</body>
+</html>
